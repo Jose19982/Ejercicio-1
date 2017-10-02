@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#/home">Proyecto</a>
+  </div>
+</nav>
+<div class="nopadding col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <div class="container-fluid"> 
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-2" id="logIn">
+        <form name="frm">
+          <div class="form-group">
+            <label>User name</label>
+            <div>
+              <input
+                type="email" 
+                class="form-control" 
+                placeholder="Email@uninorte.edu.co" 
+                ng-model="user.email"
+                name="email"
+                id="email"
+                required>
+                <div class="alert alert-warning" role="alert" ng-show="frm.email.$error.email">Ingrese un email valido</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div>
+              <input 
+                type="password" 
+                class="form-control" 
+                placeholder="Password" 
+                ng-model="user.password" 
+                name="password" 
+                id="password" 
+                required>
+                <div class="alert alert-warning" role="alert" ng-show="frm.password.$pristine && frm.password.$error.required">Ingrese una contraseña</div>
+            </div>
+          </div>
+          <div class="row btn_view">
+            <button type="submit" class="btn btn-primary btn_log" ng-click="signIn()" ng-disable="frm.$invalid">Log In</button>
+            <a class="btn btn-primary btn_log" href="#/signIn">Sign Up</a>
+            <a class="btn btn-primary btn_log" href="#/view_activity">Forgot Password?</a>
+          </div>
+        </form>
+      </div>      
+    </div>
+  </div>
+</div>
