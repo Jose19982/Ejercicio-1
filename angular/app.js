@@ -1,5 +1,5 @@
 'use strict';
-angular.module('vista', ['ngRoute'])
+angular.module('Myapp', ['ngRoute'])
 .constant('BASE_URL', 'http://localhost:8080/')
 .config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
@@ -12,10 +12,6 @@ angular.module('vista', ['ngRoute'])
 ])
 .config(function ($routeProvider) {
   $routeProvider
-    .when('/groups',{
-        templateUrl: 'partial_views/groups.html',
-        controller: 'groupsCtrl as groups'
-    })
     .when('/home',{
         templateUrl: 'partial_views/home.html',
         controller: 'LoginCtrl as login'
