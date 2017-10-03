@@ -2,33 +2,30 @@
 
 
   <head>
- 	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="bower_documents/bootstrap/dist/css/bootstrap.min.css">
   </head>
 
 
-  <body ng-app="Myapp">
+  <body ng-app="vista">
 
-    <div class="container-fluid" ng-view id="menuView">
-      <form>
-        <input type="button" value="Realidad aumentada">
-        <br><br><br>
-
-        <input type="checkbox">Redes de datos
-        <br><br><br>
-
-        Robótica
-      </form>
-    
-    </div>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div id="content-ng" ng-view></div>     
+      </div>
+    </div>    
   </body>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+
+
+
+  <script type="text/javascript" src="angular/app.js"></script>
 
 </html>
