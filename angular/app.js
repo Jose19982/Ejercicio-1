@@ -4,6 +4,6 @@ angular.module('vista', ['ngRoute'])
   $routeProvider
     .when('/home',{
         templateUrl: 'partial_views/home.html',
-        controller: 'LoginCtrl as login'
+        controller: 'homeController as homeCtrl'
     }).otherwise({ redirectTo: '/home' })
 });
